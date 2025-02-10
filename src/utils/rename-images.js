@@ -14,7 +14,7 @@ export const renameImagesAscStartingNumber = LoadImagesDecorator(
       const newPath = path.join(dir, renamedImage);
       // Renomeia o arquivo
       fs.renameSync(oldPath, newPath);
-      console.log(`Arquivo ${image} renomeado para ${renamedImage}`);
+      console.log(`🔄 File ${image} renamed to ${renamedImage}`);
       countOfImages++;
     });
     return countOfImages;

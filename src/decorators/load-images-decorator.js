@@ -2,7 +2,7 @@ import { readdirSync } from "fs";
 import {
   filteredByImages,
   sortedAscOrderNumericallyAlphabetically,
-} from "../utils/compare-fn.js";
+} from "../utils/filters.js";
 
 export function LoadImagesDecorator(fn) {
   return (dir, aux) => {
@@ -10,10 +10,10 @@ export function LoadImagesDecorator(fn) {
       .filter(filteredByImages)
       .sort(sortedAscOrderNumericallyAlphabetically); // Ordena os arquivos
     if (images.length === 0) {
-      console.log("Nenhuma imagem encontrada na pasta.");
+      console.log("😢 No image found in the folder.");
       return;
     }
-    console.log("📂 Imagens carregadas:");
+    console.log("📂 Uploaded images:");
     return fn(images, dir, aux);
   };
 }
