@@ -24,7 +24,7 @@ export const main = async () => {
       break;
     }
     default: {
-      console.log(" ⚠️ Option not available!");
+      console.log(" ⚠️  Option not available!");
       break;
     }
   }
