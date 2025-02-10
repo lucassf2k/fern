@@ -1,0 +1,24 @@
+{
+  "name": "fern",
+  "version": "1.0.0",
+  "description": "A cli to help turn images into pdfs. As well as renaming multiple images from an initial one",
+  "main": "./cli.js",
+  "type": "module",
+  "bin": {
+    "fern": "./cli.js"
+  },
+  "keywords": [
+    "NodeJS",
+    "CLI",
+    "PDF"
+  ],
+  "author": {
+    "email": "lucassilved@gmail.com",
+    "name": "Lucas Vinicius [lucassf2k]"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "sharp": "^0.33.5"
+  }
+}
