@@ -5,7 +5,7 @@ import { LoadImagesDecorator } from "../../decorators/load-images-decorator.js";
 export const renameImagesAscStartingNumber = LoadImagesDecorator(
   (images, dir, startNumber) => {
     let countOfImages = 0;
-    images.foreach((image, index) => {
+    images.forEach((image, index) => {
       const ext = path.extname(image); // Obtém a extensão do arquivo
       const newImageNumbering = startNumber + index;
       //.padStart(3, "0"); // A contagem começa com o número indicado pelo usuário

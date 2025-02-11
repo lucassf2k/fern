@@ -5,7 +5,7 @@ import { LoadPdfsDecorator } from "../../decorators/load-pdfs-decorator.js";
 export const renamePdfsFromTitleFollowingSequence = LoadPdfsDecorator(
   (pdfs, dir, filename) => {
     let countOfPdfs = 0;
-    pdfs.foreach((pdf, index) => {
+    pdfs.forEach((pdf, index) => {
       const ext = extname(pdf);
       const sequenceNumver = index + 1;
       let newFilename = `${filename}${sequenceNumver}${ext}`;
