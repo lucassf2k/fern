@@ -13,7 +13,7 @@ export function LoadImagesDecorator(fn) {
       console.log("😢 No image found in the folder.");
       return;
     }
-    console.log("📂 Uploaded images:");
+    console.log("📂 Uploaded images!");
     return fn(images, dir, aux);
   };
 }
