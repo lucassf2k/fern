@@ -5,10 +5,12 @@ import { LoadPdfsDecorator } from "../../decorators/load-pdfs-decorator.js";
 export const renamePdfsFromTitleFollowingSequence = LoadPdfsDecorator(
   (pdfs, dir, filename) => {
     let countOfPdfs = 0;
-    pdfs.map(async (pdf, index) => {
+    pdfs.foreach((pdf, index) => {
       const ext = extname(pdf);
-      let newFilename = `${filename}${index}${ext}`;
-      if (index < 10) newFilename = `${filename}0${index}${ext}`;
+      const sequenceNumver = index + 1;
+      let newFilename = `${filename}${sequenceNumver}${ext}`;
+      if (sequenceNumver < 10)
+        newFilename = `${filename}0${sequenceNumver}${ext}`;
       const oldPath = join(dir, pdf);
       const newPath = join(dir, newFilename);
       renameSync(oldPath, newPath);
