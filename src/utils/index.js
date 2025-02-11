@@ -1,4 +1,10 @@
 import { In } from "./in.js";
-import { renameImagesAscStartingNumber } from "./rename-images.js";
-import { generatePdfFromImages } from "./generate-pdf-from-images.js";
-export { In, generatePdfFromImages, renameImagesAscStartingNumber };
+import { renameImagesAscStartingNumber } from "./images/rename-images.js";
+import { generatePdfFromImages } from "./pdfs/generate-pdf-from-images.js";
+import { renamePdfsFromTitleFollowingSequence } from "./pdfs/rename-pdfs-from-title-following-sequence.js";
+export {
+  In,
+  generatePdfFromImages,
+  renameImagesAscStartingNumber,
+  renamePdfsFromTitleFollowingSequence,
+};

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import sharp from "sharp";
 import { PDFDocument } from "pdf-lib";
-import { LoadImagesDecorator } from "../decorators/load-images-decorator.js";
+import { LoadImagesDecorator } from "../../decorators/load-images-decorator.js";
 
 export const generatePdfFromImages = LoadImagesDecorator(
   async (images, dir, out) => {

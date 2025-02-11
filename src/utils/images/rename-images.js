@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { LoadImagesDecorator } from "../decorators/load-images-decorator.js";
+import { LoadImagesDecorator } from "../../decorators/load-images-decorator.js";
 
 export const renameImagesAscStartingNumber = LoadImagesDecorator(
   (images, dir, startNumber) => {
