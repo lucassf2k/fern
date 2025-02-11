@@ -1,5 +1,7 @@
 import { extname } from "path";
-import { TImages } from "./timage.js";
+
+const TIMAGES = Object.freeze([".jpg", ".jpeg", ".png", ".gif"]);
+const TPDFS = Object.freeze([".pdf", ".cbr", ".cbz"]);
 
 export function sortedAscOrderNumericallyAlphabetically(a, b) {
   // Tenta extrair números dos nomes dos arquivos
@@ -17,5 +19,9 @@ export function sortedAscOrderNumericallyAlphabetically(a, b) {
 }
 
 export function filteredByImages(file) {
-  return TImages.includes(extname(file).toLowerCase());
+  return TIMAGES.includes(extname(file).toLowerCase());
+}
+
+export function filteredByPdf(file) {
+  return TPDFS.includes(extname(file).toLowerCase());
 }
