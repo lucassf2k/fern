@@ -31,7 +31,7 @@ export const generatePdfFromImages = LoadImagesDecorator(
       fs.writeFileSync(out, pdfBytes);
       console.log(`✅ PDF successfully generated: ${out}`);
     } catch (error) {
-      console.error("❗ Error ao gerar o PDF: ", errpr);
+      console.error("❗ Error ao gerar o PDF: ", error);
     }
   }
 );
