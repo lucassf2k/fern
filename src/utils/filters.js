@@ -1,6 +1,6 @@
 import { extname } from "path";
 
-const TIMAGES = Object.freeze([".jpg", ".jpeg", ".png", ".gif"]);
+const TIMAGES = Object.freeze([".jpg", ".jpeg", ".png", ".gif", ".webp"]);
 const TPDFS = Object.freeze([".pdf", ".cbr", ".cbz"]);
 
 export function sortedAscOrderNumericallyAlphabetically(a, b) {
