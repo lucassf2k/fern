@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 import {
-  generatePdfFromImages,
   In,
+  convertAllImagesToJpg,
+  generatePdfFromImages,
   renameImagesAscStartingNumber,
   renamePdfsFromTitleFollowingSequence,
 } from "./utils/index.js";
 
 export const main = async () => {
   console.log(
-    "💡\n1 - Generate PDF from Images\n2 - Rename Images\n3 - Rename PDFs"
+    "💡\n1 - Generate PDF from Images\n2 - Rename Images\n3 - Rename PDFs\n4 - Transform in jpg"
   );
   const option = parseInt(await In("Option: "), 10);
   switch (option) {
@@ -16,7 +17,7 @@ export const main = async () => {
       const dir = await In("Directory: ");
       const filename = await In("Filename: ");
       const out = `${dir}/../${filename}.pdf`;
-      generatePdfFromImages(dir, out);
+      await generatePdfFromImages(dir, out);
       break;
     }
     case 2: {
@@ -31,6 +32,13 @@ export const main = async () => {
       const filename = await In("Filenames: ");
       const count = renamePdfsFromTitleFollowingSequence(dir, filename);
       console.log(`✅ Changed PDFs: ${count}`);
+      break;
+    }
+    case 4: {
+      const dir = await In("Directory: ");
+      //const start = parseInt(await In("Start (Ex.: 12): "), 10);
+      const count = await convertAllImagesToJpg(dir);
+      console.log(`✅ Changed images: ${count}`);
       break;
     }
     default: {
