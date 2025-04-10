@@ -22,13 +22,14 @@ A cli to help turn images into pdfs. As well as renaming multiple images from an
 
 - **Generate PDF from images**
 - **Rename images from a starting number**
-- **rename PDFs from a file name**
+- **Rename PDFs from a file name**
   - From this filename the following PDFs (if they exist) will be renamed {filename}{0, 1, 2...}
+- **Convert images to jpg**
 
 ### Accepted file extensions
 
 - Images
-  - .jpeg, .jpg, .png, .git
+  - .jpeg, .jpg, .png, .git, .webp
 - PDFs Or Similar
   - .pdf, .cbr, .cbz
 
