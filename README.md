@@ -25,6 +25,7 @@ A cli to help turn images into pdfs. As well as renaming multiple images from an
 - **Rename PDFs from a file name**
   - From this filename the following PDFs (if they exist) will be renamed {filename}{0, 1, 2...}
 - **Convert images to jpg**
+- **Merge PDFs in directory**
 
 ### Accepted file extensions
 
